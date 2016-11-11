@@ -4,7 +4,7 @@
 $("#gong").on('click', function (e) {
     e.preventDefault();
     $.get("greeting", null, function(data) {
-        $("#content").html(data);
+        $("#content").html(data.text);
         $("#content").hide().fadeIn("slow");
     })
 })

@@ -1,5 +1,7 @@
 package org.kibel.controller;
 
+import org.kibel.model.Greeting;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class IndexController {
 
     @RequestMapping("/greeting")
-    public String greeting() {
-        return "some response";
+    public ResponseEntity<Greeting> greeting() {
+        return ResponseEntity.ok(new Greeting("Hello user!"));
     }
 }
